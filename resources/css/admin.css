@@ -1,0 +1,90 @@
+
+.content-app-content {
+    padding: calc(2rem + 4.45rem + 1.3rem) 2rem 0;
+}
+
+.floating-nav {
+    position: fixed;
+    right: 0;
+    margin: 1.3rem 2rem 0;
+    width: calc(100vw - (100vw - 100%) - calc(2rem * 2) - 260px);
+    border-radius: 0.428rem;
+    z-index: 12;
+}
+
+.header-navbar-shadow {
+    display: block;
+    background: -webkit-linear-gradient(top, rgba(248, 248, 248, 0.95) 44%, rgba(248, 248, 248, 0.46) 73%, rgba(255, 255, 255, 0));
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0.95) 44%, rgba(248, 248, 248, 0.46) 73%, rgba(255, 255, 255, 0));
+    padding-top: 2.2rem;
+    background-repeat: repeat;
+    width: 99%;
+    height: 102px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.shadow-bottom {
+    position: absolute;
+    z-index: 2;
+    height: 50px;
+    width: 90%;
+    pointer-events: none;
+    margin-top: 3rem;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    background: -webkit-linear-gradient(#FFFFFF 41%, rgba(255, 255, 255, 0.11) 95%, rgba(255, 255, 255, 0));
+    background: linear-gradient(#FFFFFF 41%, rgba(255, 255, 255, 0.11) 95%, rgba(255, 255, 255, 0));
+}
+
+.close {
+    @apply w-24;
+    @apply w-24;
+    @apply justify-center;
+}
+
+.close a {
+    @apply justify-center;
+}
+
+.close a .b-link {
+    @apply hidden;
+}
+
+.close .title-header {
+    @apply hidden;
+}
+
+.close .b-shadow {
+    @apply hidden;
+}
+
+.open {
+    @apply w-64;
+}
+.open a {
+    @apply justify-start;
+    @apply pl-4;
+}
+.open .title-header {
+    @apply block;
+}
+.open.b-link {
+    @apply block;
+}
+.open.b-shadow {
+    @apply block;
+}
+
+
+@media (max-width: 1024px) {
+    .floating-nav {
+        width: calc(100vw - (100vw - 100%) - calc(2rem * 2) - 100px);
+    }
+}
+
+.main-menu-content {
+    height: calc(100% - 6.45rem) !important;
+}

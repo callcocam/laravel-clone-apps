@@ -1,0 +1,146 @@
+.expanded {
+    -webkit-transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0s;
+    transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background 0s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.b-main-open{
+    @apply left-24;
+    @apply fixed;
+}
+
+.burger-open {
+    @apply w-64;
+}
+
+.burger-open .b-title-logo {
+    @apply block;
+}
+
+.burger-open .b-menu {
+    @apply flex;
+    @apply left-56;
+    @apply absolute;
+    @apply mt-3;
+    @apply cursor-pointer;
+    @apply items-center;
+    @apply justify-center;
+    @apply h-5 w-5;
+    @apply rounded-full;
+    @apply border;
+    @apply border-2;
+    @apply border-gray-800;
+    @apply expanded;
+}
+
+.burger-open .b-menu-close {
+    @apply left-0;
+}
+
+.b-menu .b-menu-span {
+    @apply flex;
+    @apply h-2;
+    @apply w-2;
+    @apply rounded-full;
+    @apply border;
+    @apply border-2;
+    @apply border-gray-800;
+}
+
+.b-menu-close .b-menu-span {
+    @apply hidden;
+}
+
+.burger-open .b-header {
+    @apply w-64;
+}
+
+.burger-open .b-nav {
+    @apply w-full;
+}
+
+.burger-open .b-nav .b-link-text {
+    @apply block;
+    @apply ml-4;
+}
+
+.burger-open .b-nav .b-link {
+    @apply justify-start;
+}
+
+.burger-close {
+    @apply w-24;
+    @apply relative;
+}
+
+.burger-close .b-title-logo {
+    @apply hidden;
+}
+
+.burger-close .b-menu {
+    @apply hidden;
+    @apply left-0;
+}
+
+.burger-close .b-nav {
+    @apply w-24;
+}
+
+.burger-close .b-header {
+    @apply w-24;
+}
+
+.burger-close .b-nav .b-link {
+    @apply justify-center;
+}
+
+.burger-close .b-nav .b-link-text {
+    @apply hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(250);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(startYposition);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(endYposition);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateX(255px);
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translate3d(255px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        visibility: hidden;
+    }
+}
